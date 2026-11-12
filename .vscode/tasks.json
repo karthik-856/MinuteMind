@@ -2,10 +2,18 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "MinuteMind: Dev Server",
-      "type": "npm",
-      "script": "dev",
+      "label": "Run MinuteMind (Frontend + Backend)",
+      "type": "shell",
+      "windows": {
+        "command": "powershell -NoProfile -Command \"Get-NetTCPConnection -LocalPort 43127 -State Listen -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }; npm run dev\""
+      },
+      "command": "npm run dev",
       "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
       "problemMatcher": {
         "owner": "next",
         "pattern": {
