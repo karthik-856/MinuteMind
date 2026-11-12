@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MinuteMind: Launch & Preview in VS Code",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "pattern": "Ready in",
+        "uriFormat": "http://127.0.0.1:43127",
+        "action": "openSimpleBrowser"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MinuteMind: Dev Server",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "next",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "next dev",
+          "endsPattern": "Ready in"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "MinuteMind: Run Tests",
+      "type": "npm",
+      "script": "test",
+      "group": "test"
+    },
+    {
+      "label": "MinuteMind: Lint",
+      "type": "npm",
+      "script": "lint"
+    }
+  ]
+}
